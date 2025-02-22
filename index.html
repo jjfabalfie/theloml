@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How long you've stuck with my tism ahh</title>
+    <style>
+        body {
+            font-family: Arial,  sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .days-count {
+            font-size: 48px;
+            font-weight: bold;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Days Since I met the love of my life...</h1>
+        <p class="days-count" id="daysCount"></p>
+    </div>
+    <p>
+        I know this is nerdy mollie but I think you'll like it I hope.
+        That little counter shows how long its been since the night we got together. Love you x
+    </p>
+    <script>
+        function calculateDays() {
+            const targetDate = new Date("2025-01-06");
+            const currentDate = new Date();
+            const timeDifference = currentDate - targetDate;
+            const daysDifference = Math.floor(timeDifference/ (1000 * 60 * 60 * 24));
 
+            document.getElementById("daysCount").innerText = daysDifference;
+        }
+
+        window.onload = calculateDays
+    </script>
+</body>
+</html>
